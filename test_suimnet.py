@@ -15,10 +15,10 @@ from utils.data_utils import getPaths
 
 ## experiment directories
 #test_dir = "/mnt/data1/ImageSeg/suim/TEST/images/"
-test_dir = "data/test/images/"
+test_dir = "test_segmentation/"
 
 ## sample and ckpt dir
-samples_dir = "data/test/output/"
+samples_dir = "output_segmentation/"
 RO_dir = samples_dir + "RO/"
 FB_dir = samples_dir + "FV/"
 WR_dir = samples_dir + "WR/"
@@ -32,7 +32,7 @@ if not exists(HD_dir): os.makedirs(HD_dir)
 if not exists(RI_dir): os.makedirs(RI_dir)
 
 ## input/output shapes
-base_ = 'VGG' # or 'RSB'
+base_ = 'RSB' # or 'VGG'
 if base_=='RSB':
     im_res_ = (320, 240, 3) 
     ckpt_name = "suimnet_rsb5.hdf5"
